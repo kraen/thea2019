@@ -7,121 +7,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <title>Theas website</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
-  <nav class="navbar navbar-light navbar-expand-lg fixed-top shadow-sm bg-white">
-    <a href="index.html" class="navbar-brand">Bootstrap 101</a>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <a href="index.html" class="navbar-brand">Thea Bech-Petersen</a>
     <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Om mig</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Testimonials</a></li>
       </ul>
-      <div class="navbar-text ml-lg-3">
-        <a href="#" class="btn btn-primary text-white shadow">Sign Up</a>
-      </div>
     </div>
   </nav>
 
   <!-- Hero Section-->
-  <section class="bg-light">
+  <section class="hero">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 order-2 order-lg-1">
-          <h1>Bootstrap 101 template</h1>
-          <p class="lead">Proident eu nisi commodo enim deserunt enim duis sunt nostrud anim. Sunt do sit enim veniam nostrud culpa adipisicing do ullamco occaecat et. </p>
-          <p><a href="#" class="btn btn-primary shadow mr-2">Discover More</a><a href="#" class="btn btn-outline-primary">Some another action</a></p>
+        <div class="col-md-12">
+          <h1 class="text-center display-1 heading-black">Hej</h1>
+          <p class="lead mt-5">Proident eu nisi commodo enim deserunt enim duis sunt nostrud anim. Sunt do sit enim veniam nostrud culpa adipisicing do ullamco occaecat et. </p>
         </div>
-        <div class="col-lg-6 order-1 order-lg-2"><img src="img/macbook.png" alt="..." class="img-fluid"></div>
+
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="container">
-      <h2>Services</h2>
-      <p class="lead text-muted mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <div class="row">
-        <div class="col-sm-6 col-lg-4 mb-3">
-          <svg class="lnr text-primary services-icon">
-            <use xlink:href="#lnr-magic-wand"></use>
-          </svg>
-          <h6>tekst</h6>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Portfolio section -->
 
-  <section class="bg-light">
-    <div class="container">
-      <h2>Portfolio</h2>
-      <p class="lead text-muted mb-5">Min portfolio</p>
+  <section class="portfolio-section">
+    <div class="container-fluid p-0">
       <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card shadow border-0 h-100">
-            <a href="#"><img src="img/mockup2.jpg" alt="" class="card-img-top"></a>
-            <div class="card-body">
-              <h5> <a href="#" class="text-dark">Voluptate ex irure</a></h5>
-              <p class="text-muted card-text">Voluptate ex irure ipsum ipsum ullamco ipsum reprehenderit non ut mollit commodo.</p>
-              <p class="card-text"><a href="#">Read more</a></p>
-            </div>
-          </div>
+        <div class="col-lg-6 col-md-6">
+          <a href="#" class="portfolio-item" style="background-image: url('../wp-content/gallery/afernat/afernat_gronlandsk-fugl_web.jpg');"><div class="pi-inner"><h2>Link</h2></div></a>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <a href="#" class="portfolio-item" style="background-image: url('../wp-content/gallery/tryk/tryk_vldame4.png');"><div class="pi-inner"><h2>Link</h2></div></a>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <a href="#" class="portfolio-item" style="background-image: url('../wp-content/gallery/skitser/batman5.jpg');"><div class="pi-inner"><h2>Link</h2></div></a>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <a href="#" class="portfolio-item" style="background-image: url('../wp-content/gallery/filmmagasin-169/16_9_godfather.png');"><div class="pi-inner"><h2>Link</h2></div></a>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <a href="#" class="portfolio-item" style="background-image: url('../wp-content/gallery/afgang-oese/web_ose_model2.png');"><div class="pi-inner"><h2>Link</h2></div></a>
+        </div>
+        <div class="col-lg-12 col-md-12">
+          <a href="#" class="portfolio-item" style="background-image: url('../wp-content/gallery/skitser/robie_house.jpg');"><div class="pi-inner"><h2>Link</h2></div></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-
-  <div class="py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <h5>Bootstrap 101</h5>
-          <ul class="contact-info list-unstyled">
-            <li><a href="mailto:sales@landy.com" class="text-dark">hello@bootstrap101.com</a></li>
-            <li><a href="tel:123456789" class="text-dark">+00 123 456 789</a></li>
-          </ul>
-          <p class="text-muted">Laborum aute enim consectetur eu laboris commodo.</p>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <h5>Pages</h5>
-          <ul class="links list-unstyled">
-            <li> <a href="#" class="text-muted">Nisi in commodo</a></li>
-            <li> <a href="#" class="text-muted">reprehenderit</a></li>
-            <li> <a href="#" class="text-muted">Nostrud</a></li>
-            <li> <a href="#" class="text-muted">Et eu eu</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <h5>Favourites</h5>
-          <ul class="links list-unstyled">
-            <li> <a href="#" class="text-muted">Minim labore nulla</a></li>
-            <li> <a href="#" class="text-muted">Nulla qui nisi</a></li>
-            <li> <a href="#" class="text-muted">Iris Vor Arnim</a></li>
-            <li> <a href="#" class="text-muted">Consectetur cupidatat</a></li>
-          </ul>
-        </div>
-      </div>
+  <section class="footer-section">
+    <div class="container text-center">
+      <h2 class="mb-5 heading-black">Kontakt</h2>
+      <a href="#" role="button" class="btn btn-darkblue">Kontakt mig</a>
+      <p class="mt-5 small">&copy; 2019 Thea Bech-Petersen. All rights reserved. </p>
     </div>
-  </div>
-
-  <div class="py-3 bg-dark text-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7 text-center text-md-left">
-          <p class="mb-md-0">&copy; 2018 Your company. All rights reserved. </p>
-        </div>
-        <div class="col-md-5 text-center text-md-right">
-          <p class="mb-0">Template By <a href="https://bootstrapious.com/" class="external text-white">Bootstrapious</a> </p>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 
   <!-- JS Includes -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
