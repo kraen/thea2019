@@ -6,9 +6,7 @@
   </div>
 </section>
 
-<!-- JS Includes -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
-<script src="js/bootstrap.bundle.min.js" charset="utf-8"></script>
-<script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+<?php wp_footer(); ?>
+
 </body>
 </html>
