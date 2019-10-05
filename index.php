@@ -1,29 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="all,follow">
-  <title>Theas website</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/app.css">
-</head>
-<body>
-
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <a href="index.html" class="navbar-brand">Thea Bech-Petersen</a>
-    <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-    <div id="navbarSupportedContent" class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a href="#" class="nav-link">Om mig</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Testimonials</a></li>
-      </ul>
-    </div>
-  </nav>
+<?php get_header(); ?>
 
   <!-- Hero Section-->
   <section class="hero">
@@ -65,17 +40,4 @@
     </div>
   </section>
 
-  <section class="footer-section">
-    <div class="container text-center">
-      <h2 class="mb-5 heading-black">Kontakt</h2>
-      <a href="#" role="button" class="btn btn-darkblue">Kontakt mig</a>
-      <p class="mt-5 small">&copy; 2019 Thea Bech-Petersen. All rights reserved. </p>
-    </div>
-  </section>
-
-  <!-- JS Includes -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js" charset="utf-8"></script>
-  <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>
