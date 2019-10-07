@@ -36,6 +36,20 @@ function theabech_load_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'theabech_load_scripts' );
 
+function create_portfolio_post_type() {
+  register_post_type( 'portfolio',
+    array(
+      'labels' => array(
+        'name' => 'Portfolio',
+        'singular_name' => 'Portfolio'
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'portfolio'),
+    )
+  );
+}
 
+add_action( 'init', 'create_portfolio_post_type');
 
 ?>
