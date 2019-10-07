@@ -57,7 +57,7 @@ a:hover, .nav-link:hover {
     text-decoration: none;
 }
 
-.hero, .footer-section {
+.hero, .footer-section, .post-section {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
