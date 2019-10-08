@@ -1,0 +1,39 @@
+<?php get_header(); ?>
+
+<?php if (have_posts()) : ?>
+  <section class="post-section">
+    <?php while (have_posts()) : the_post();
+    $imgUrl = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
+    ?>
+    <div class="single-portfolio-item-header" style="background-image: url('<?php echo $imgUrl; ?>');">
+      <div class="inner">
+
+
+      <div class="container h-100 text-center">
+        <div class="row h-100">
+          <div class="col align-self-center">
+            <h1 class="display-2"><?php the_title(); ?></h1>
+          </div>
+
+        </div>
+
+      </div>
+      </div>
+    </div>
+  <div class="container">
+
+
+
+    <div class="post" id="post-<?php the_id(); ?>">
+
+      <p><?php the_content(); ?></p>
+    </div>
+
+
+  </div>
+  <?php endwhile; ?>
+</section>
+<?php else : ?>
+<?php endif; ?>
+
+<?php get_footer(); ?>

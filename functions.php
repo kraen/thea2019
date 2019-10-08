@@ -13,6 +13,8 @@ if ( ! function_exists( 'theabech_setup' ) ) :
     add_theme_support( 'automatic-feed-links' );
 
     add_theme_support( 'title-tag' );
+
+    require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
   }
 
 endif;

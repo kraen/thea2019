@@ -46,6 +46,8 @@ $post_count = $newQuery->post_count;
 
 $i = 1;
 
+$span = "col-lg-6 col-md-6";
+
 if ($newQuery->have_posts()) :
 ?>
 <section class="portfolio-section">
@@ -57,18 +59,31 @@ if ($newQuery->have_posts()) :
 
       ?>
       <?php
-      if ($post_count <= 6) {
-        if ($i == $post_count ) {
-          echo "<div class=\"col-lg-12 col-md-12\">";
+      if ($post_count == 6) {
+        if ($i == 3 || $i == 4 || $i == 5) {
+          $span = "col-lg-4 col-md-4";
+        }elseif ($i == 6 ) {
+          $span = "col-lg-12 col-md-12";
+        }else{
+          $span = "col-lg-6 col-md-6";
+        }
+      }elseif ($post_count == 4) {
+        if ($i == 1 || $i == 4) {
+          $span = "col-lg-4 col-md-4";
+        }else{
+          $span = "col-lg-8 col-md-8";
+        }
+      }else{
+        if ($i <= 2) {
+          $span = "col-lg-6 col-md-6";
+        }
+        if ($i == 3 || $i == 4 || $i == 5) {
+          $span = "col-lg-4 col-md-4";
         }
       }
 
-      if ($i <= 2) {
-        echo "<div class=\"col-lg-6 col-md-6\">";
-      }
-
       ?>
-
+      <div class="<?php echo $span; ?>">
         <a href="<?php the_permalink(); ?>" class="portfolio-item" style="background-image: url('<?php echo $imgUrl; ?>');"><div class="pi-inner"><h2><?php the_title(); ?></h2></div></a>
       </div>
 

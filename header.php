@@ -9,13 +9,19 @@
 <body>
 
   <nav class="navbar navbar-expand-lg fixed-top">
-    <a href="index.html" class="navbar-brand">Thea Bech-Petersen</a>
+    <a href="<?php bloginfo('url'); ?>" class="navbar-brand"><?php bloginfo('name'); ?></a>
     <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a href="#" class="nav-link">Om mig</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Testimonials</a></li>
-      </ul>
+      <?php
+wp_nav_menu( array(
+    'theme_location' => 'primary',
+    'container'       => 'div',
+    'container_class' => 'collapse navbar-collapse',
+    'container_id'    => 'bs-example-navbar-collapse-1',
+    'menu_class'      => 'navbar-nav ml-auto',
+    'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+    'walker'          => new WP_Bootstrap_Navwalker() ) );
+?>
+
     </div>
   </nav>
