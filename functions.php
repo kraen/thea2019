@@ -43,6 +43,14 @@ function create_portfolio_post_type() {
         'name' => 'Portfolio',
         'singular_name' => 'Portfolio'
       ),
+      'supports' => array(
+        'title',
+        'editor',
+        'thumbnail',
+        'author',
+        'revisions'
+      ),
+      'show_in_rest' => true,
       'public' => true,
       'has_archive' => true,
       'rewrite' => array('slug' => 'portfolio'),

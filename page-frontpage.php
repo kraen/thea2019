@@ -38,30 +38,44 @@
 <?php endif; ?>
 
 <!-- Portfolio section -->
+<?php
+// Display Custom Post Type portfolio
+$args = array('post_type' => 'portfolio', 'posts_per_page' => 6);
+$newQuery = new WP_Query($args);
+$post_count = $newQuery->post_count;
 
+$i = 1;
+
+if ($newQuery->have_posts()) :
+?>
 <section class="portfolio-section">
   <div class="container-fluid p-0">
     <div class="row">
-      <div class="col-lg-6 col-md-6">
-        <a href="#" class="portfolio-item" style="background-image: url('../wp-content/gallery/afernat/afernat_gronlandsk-fugl_web.jpg');"><div class="pi-inner"><h2>Link</h2></div></a>
+      <?php while ($newQuery->have_posts()) : $newQuery->the_post();
+
+      $imgUrl = wp_get_attachment_url( get_post_thumbnail_id( $newQuery->ID ) );
+
+      ?>
+      <?php
+      if ($post_count <= 6) {
+        if ($i == $post_count ) {
+          echo "<div class=\"col-lg-12 col-md-12\">";
+        }
+      }
+
+      if ($i <= 2) {
+        echo "<div class=\"col-lg-6 col-md-6\">";
+      }
+
+      ?>
+
+        <a href="<?php the_permalink(); ?>" class="portfolio-item" style="background-image: url('<?php echo $imgUrl; ?>');"><div class="pi-inner"><h2><?php the_title(); ?></h2></div></a>
       </div>
-      <div class="col-lg-6 col-md-6">
-        <a href="#" class="portfolio-item" style="background-image: url('../wp-content/gallery/tryk/tryk_vldame4.png');"><div class="pi-inner"><h2>Link</h2></div></a>
-      </div>
-      <div class="col-lg-4 col-md-4">
-        <a href="#" class="portfolio-item" style="background-image: url('../wp-content/gallery/skitser/batman5.jpg');"><div class="pi-inner"><h2>Link</h2></div></a>
-      </div>
-      <div class="col-lg-4 col-md-4">
-        <a href="#" class="portfolio-item" style="background-image: url('../wp-content/gallery/filmmagasin-169/16_9_godfather.png');"><div class="pi-inner"><h2>Link</h2></div></a>
-      </div>
-      <div class="col-lg-4 col-md-4">
-        <a href="#" class="portfolio-item" style="background-image: url('../wp-content/gallery/afgang-oese/web_ose_model2.png');"><div class="pi-inner"><h2>Link</h2></div></a>
-      </div>
-      <div class="col-lg-12 col-md-12">
-        <a href="#" class="portfolio-item" style="background-image: url('../wp-content/gallery/skitser/robie_house.jpg');"><div class="pi-inner"><h2>Link</h2></div></a>
-      </div>
+
+
+    <?php $i++; endwhile; wp_reset_postdata(); ?>
     </div>
   </div>
 </section>
-
+<?php endif; ?>
 <?php get_footer(); ?>
