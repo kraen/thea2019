@@ -1,4 +1,18 @@
 <?php
+
+function arphabet_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Hero area frontpage',
+		'id'            => 'hero_frontpage',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h1 class="text-center display-1 heading-black">',
+		'after_title'   => '</h1>',
+	) );
+
+}
+
 if ( ! function_exists( 'theabech_setup' ) ) :
 
   function theabech_setup() {
@@ -15,6 +29,9 @@ if ( ! function_exists( 'theabech_setup' ) ) :
     add_theme_support( 'title-tag' );
 
     require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
+    add_action( 'widgets_init', 'arphabet_widgets_init' );
+
   }
 
 endif;

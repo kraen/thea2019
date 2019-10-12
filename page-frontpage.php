@@ -8,17 +8,18 @@
 <?php get_header(); ?>
 
 <!-- Hero Section-->
-<section class="hero">
+<?php if ( is_active_sidebar( 'hero_frontpage' ) ) : ?>
+  <section class="hero">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="text-center display-1 heading-black">Hej</h1>
-        <p class="lead mt-5">Proident eu nisi commodo enim deserunt enim duis sunt nostrud anim. Sunt do sit enim veniam nostrud culpa adipisicing do ullamco occaecat et. </p>
+        <?php dynamic_sidebar( 'hero_frontpage' ); ?>
       </div>
 
     </div>
   </div>
 </section>
+<?php endif; ?>
 
 <?php if (have_posts()) : ?>
   <section class="post-section">
@@ -27,7 +28,6 @@
 
   <?php while (have_posts()) : the_post(); ?>
     <div class="post" id="post-<?php the_id(); ?>">
-      <h1><?php the_title(); ?></h1>
       <p><?php the_content(); ?></p>
     </div>
 
