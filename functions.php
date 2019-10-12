@@ -42,8 +42,8 @@ function theabech_load_styles() {
 
   wp_enqueue_style( 'main', get_template_directory_uri() . '/style.css' );
   wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
-  wp_enqueue_style( 'font', 'https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap', false );
-
+  wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap', false );
+	wp_enqueue_style( 'material-icons', 'https://cdn.materialdesignicons.com/4.5.95/css/materialdesignicons.min.css', false);
 }
 
 add_action( 'wp_enqueue_scripts', 'theabech_load_styles' );
