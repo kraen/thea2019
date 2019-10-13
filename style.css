@@ -57,7 +57,7 @@ a:hover, .nav-link:hover {
     text-decoration: none;
 }
 
-.hero, .footer-section, .post-section {
+.footer-section, .post-section {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -71,6 +71,11 @@ a:hover, .nav-link:hover {
 
 .heading-black {
   font-weight: 900;
+}
+
+.post-thumbnail img {
+  max-width: 100%;
+  height: auto;
 }
 
 .portfolio-section {
@@ -132,18 +137,4 @@ a:hover, .nav-link:hover {
 .portfolio-item .pi-inner:hover {
   opacity: 100;
   background: rgba(0,0,0,0.5);
-}
-
-.lnr {
-  display: inline-block;
-  fill: currentColor;
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.05em;
-  stroke-width: 1;
-}
-
-.services-icon {
-  margin-bottom: 20px;
-  font-size: 30px;
 }

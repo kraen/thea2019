@@ -2,17 +2,42 @@
 
 <?php if (have_posts()) : ?>
   <section class="post-section">
-  <div class="container">
 
 
-  <?php while (have_posts()) : the_post(); ?>
-    <div class="post" id="post-<?php the_id(); ?>">
-      <h1><?php the_title(); ?></h1>
-      <p><?php the_content(); ?></p>
-    </div>
+      <?php while (have_posts()) : the_post();
+      $imgUrl = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
+      ?>
+      <div id="post-<?php the_id(); ?>" class="single-portfolio-item-header" style="background-image: url('<?php echo $imgUrl; ?>');">
+        <div class="inner">
 
-  <?php endwhile; ?>
-  </div>
+
+        <div class="container h-100 text-center">
+          <div class="row h-100">
+            <div class="col align-self-center">
+              <h1 class="display-2"><?php the_title(); ?></h1>
+            </div>
+
+          </div>
+
+        </div>
+        </div>
+      </div>
+      <div class="container mt-3">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="post">
+
+              <div class="meta small my-4">
+                <i class="mdi mdi-calendar" aria-hidden="true"></i> <?php the_date(); ?>
+              </div>
+              <p><?php the_content(); ?></p>
+            </div>
+          </div>
+        </div>
+      </div>
+        <?php endwhile; ?>
+
+
 </section>
 <?php else : ?>
 <?php endif; ?>
