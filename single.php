@@ -34,8 +34,17 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="comments" id="comments">
+              <?php if ( comments_open() || get_comments_number() ) {
+        				comments_template();
+        			} ?>
+            </div>
+          </div>
+        </div>
       </div>
-        <?php endwhile; ?>
+      <?php endwhile; ?>
 
 
 </section>

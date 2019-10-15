@@ -13,28 +13,22 @@
               <div class="col post">
                 <h1><?php the_title(); ?></h1>
                 <div class="meta small my-4">
-                  <i class="mdi mdi-calendar" aria-hidden="true"></i> <?php the_date(); ?>
+                  <i class="mdi mdi-calendar" aria-hidden="true"></i> <?php the_date(); ?> // <i class="mdi mdi-comment" aria-hidden="true"></i> <?php comments_popup_link('Ingen kommentarer', '1 kommentar', '% kommentarer'); ?>
                 </div>
               </div>
               <div class="w-100"></div>
-              <div class="col-md-8">
+              <div class="col">
                 <div class="post-content">
                   <?php the_content(); ?>
                   <a href="<?php the_permalink(); ?>">Læs mere</a>
                 </div>
 
               </div>
-              <?php if (has_post_thumbnail()) : ?>
-                <div class="col-md-4 post-thumbnail">
-                  <?php the_post_thumbnail( 'large' ); ?>
-                </div>
-              <?php endif; ?>
             </div>
             <hr>
 
           <?php endwhile; ?>
-          <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-          if (1 == $paged) page_navi(); ?>
+          <?php page_navi(); ?>
           </div>
 
         <?php else : ?>
